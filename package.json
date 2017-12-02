@@ -1,0 +1,30 @@
+{
+  "name": "appapi",
+  "version": "1.0.0",
+  "author": "wy",
+  "private": true,
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "start": "node build/dev-server.js",
+    "build": "node build/build.js",
+    "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
+    "e2e": "node test/e2e/runner.js",
+    "test": "npm run unit && npm run e2e",
+    "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "log4js": "^0.6.38",
+    "merge-descriptors": "^1.0.1",
+    "morgan": "~1.6.1",
+    "request": "^2.72.0"
+  },
+  "devDependencies": {
+    "archiver": "^1.1.0",
+    "moment": "^2.14.1"
+  }
+}
