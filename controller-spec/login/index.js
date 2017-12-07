@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-router.post('/file/upload', function(req, res, next) {
-    req.pipe(useRequest.request(useConfig.get('h5Url')+req.url)).pipe(res);
-});
-router.post('/file/uploads', function(req, res, next) {
-    req.pipe(useRequest.request(useConfig.get('h5Url')+req.url)).pipe(res);
-});
-router.get('*.*', function(req, res, next) {
-    req.pipe(useRequest.request(useConfig.get('apiUrl')+req.url)).pipe(res);
+router.post('/bind', function(req, res, next) {
+    useRequest.send(req , res , {
+        url:useConfig.get('apiUrl')+req.url,
+        tokenInfo:req.headers.tokeninfo,
+        done:function(a){
+            res.send(a);
+        }
+    });
 });
 router.get('*', function(req, res, next) {
     useRequest.send(req , res , {
@@ -42,4 +42,4 @@ router.post('*', function(req, res, next) {
     useRequest.send(req , res , options);
 });
 exports.router = router;
-exports.__path = '/';
+exports.__path = '/login';

@@ -9,6 +9,7 @@ module.exports = {
         }
         var method = options.method || 'GET';
         var headers = options.headers || {};
+        headers.tokenInfo = options.tokenInfo || '';
         var __ = {
             url:options.url,
             method:method.toUpperCase(),
