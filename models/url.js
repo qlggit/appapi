@@ -1,7 +1,24 @@
 var apiUrl = useConfig.get('apiUrl') ;
-var alidayuUrl = useConfig.get('alidayuUrl') ;
+var h5Url = useConfig.get('h5Url') ;
 module.exports = {
     sms:{
-        send:alidayuUrl + '/api/sms/v_1/send',
+        send:h5Url + '/sms/send',
+        apiSend:apiUrl + '/api/sms/v_1/send',
+    },
+    city:{
+        patent:apiUrl + '/api/area/v_1/list',
+        child:apiUrl + '/api/area/v_1/childList',
+    },
+    version:{
+        check:h5Url + '/server/version/check',
+    },
+    agreement:{
+        member:h5Url + '/server/agreement/member',
+    },
+    show:{
+        video:h5Url + '/server/show/video',
+    },
+    merchant:{
+        info:apiUrl + '/mgr/supplier/v_1/info',
     },
 };

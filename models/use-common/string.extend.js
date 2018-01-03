@@ -121,6 +121,7 @@ module.exports = function(obj){
             if(typeof param === 'object'){
                 param = obj.serialize(param);
             }
+            if(!param)return url;
             url += /\?/.test(url)?'&':'?';
             return url += param;
         };

@@ -1,8 +1,10 @@
 //admin 1234yqs_admin
 module.exports = {
     "port":3005,
-    apiUrl:'http://192.168.1.117:8012',
+    apiUrl:'http://192.168.1.122:8012',
     h5Url:'http://192.168.1.119:3002',
+    seatUrl:'http://192.168.1.119:3001',
+    rongcloud:'http://api.cn.ronghub.com',
     "log4js":{
         "customBaseDir" :"/logs/",
         "customDefaultAtt" :{

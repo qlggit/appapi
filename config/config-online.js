@@ -1,6 +1,9 @@
 //admin 1234yqs_admin
 module.exports = {
-    "apiUrl":'http://172.19.56.132:4200',
+    h5Url:'http://h5.yukew.com',
+    seatUrl:'http://wx.yukew.com',
+    apiUrl:'http://172.19.56.132:4200',
+    host:'http://172.19.56.132',
     "log4js":{
         "customBaseDir" :"../logs/appapi/",
         "customDefaultAtt" :{
