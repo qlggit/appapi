@@ -13,12 +13,15 @@ module.exports = {
         check:h5Url + '/server/version/check',
     },
     agreement:{
-        member:h5Url + '/server/agreement/member',
+        auto:h5Url + '/server/agreement/',
     },
     show:{
         video:h5Url + '/server/show/video',
     },
     merchant:{
         info:apiUrl + '/mgr/supplier/v_1/info',
+    },
+    product:{
+        list:apiUrl + '/mgr/goods/v_1/list',
     },
 };

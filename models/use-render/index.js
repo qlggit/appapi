@@ -35,7 +35,7 @@ module.exports = function(req , res , next){
         });
     };
     res.useSend = function(body){
-        if(body.code == undefined)body.code = 1;
+        if(body.code === undefined)body.code = 1;
         body.message = body.message || (body.code === 0 ?'操作成功':'操作失败');
         res.send(body);
     };
