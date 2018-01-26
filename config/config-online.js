@@ -4,6 +4,7 @@ module.exports = {
     seatUrl:'http://wx.yukew.com',
     apiUrl:'http://172.19.56.132:4200',
     host:'http://172.19.56.132',
+    htmlUrl:'http://172.19.56.132:4200',
     "log4js":{
         "customBaseDir" :"../logs/appapi/",
         "customDefaultAtt" :{
