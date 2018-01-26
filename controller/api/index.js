@@ -57,6 +57,8 @@ router.post('*', function(req, res, next) {
     }
     else if(body.body){
         options.data = body.body;
+        delete body.body;
+        options.url = useCommon.addUrlParam(options.url,body);
     }else{
         options.data = body;
         options.notBody = 1;

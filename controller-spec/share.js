@@ -34,5 +34,18 @@ router.get('/merchant', function(req, res, next) {
         }
     });
 });
+router.get('/spread', function(req, res, next) {
+    var userId = req.query.userId;
+    var resData = {
+        code:'10000',
+        result:{
+            title:'',
+            comment:'',
+            autoComment:'',
+            link:useCommon.addUrlParam(useConfig.get('seatUrl') + '/server/qrcode/spread/'+userId.split('_')[0]),
+        }
+    };
+    res.send(resData);
+});
 exports.router = router;
 exports.__path = '/share';
